@@ -55,6 +55,8 @@ Este microservicio será consumido por otros módulos del sistema para validar p
 git clone https://github.com/TU-USUARIO/microservicio-autenticacion-usuarios.git
 cd microservicio-autenticacion-usuarios
 
+---
+
 ### 2. Instalar dependencias
 composer install
 
@@ -65,3 +67,43 @@ cp .env.example .env
 DB_DATABASE=usuarios
 DB_USERNAME=root
 DB_PASSWORD=
+
+### 4. Generar APP_KEY
+php artisan key:generate
+
+### 5. Ejecutar migraciones
+php artisan migrate
+
+---
+
+## 📦 Instalación del Proyecto
+Registro
+POST /api/register
+
+Inicio de sesión
+POST /api/login
+
+Cerrar sesión
+POST /api/logout
+
+Obtener usuario autenticado
+GET /api/user
+
+
+(Dependen del controlador implementado por el equipo.)
+
+📘 Descripción General
+
+Este microservicio permite:
+
+Registrar usuarios
+
+Generar tokens de autenticación
+
+Validar tokens desde otros microservicios
+
+Asignar y verificar roles (perfil)
+
+Administrar sesiones mediante Laravel Sanctum
+
+Actúa como autoridad central de autenticación dentro de una arquitectura basada en microservicios.

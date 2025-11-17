@@ -1,42 +1,57 @@
-# Implementación de Autenticación con Laravel Sanctum  
-## Microservicio de Gestión de Usuarios
+# Microservicio de Gestión de Usuarios  
+### Autenticación basada en Tokens con Laravel Sanctum
 
-### GRUPO 4
-
-**Integrantes del grupo:**
-1. Sandy Mariño  
-2. Jonathan Hernández  
-3. Marco Chacón  
-4. Carlos Fernández
-5. Carlos Cantuña  
-6. Jonathan Hernández  
-
+## 👥 Grupo 4 — Integrantes
+- Sandy Mariño  
+- Jonathan Hernández  
+- Marco Chacón  
+- Carlos Fernández  
+- Carlos Cantuña  
 
 ---
 
-### Objetivo
-Implementar un sistema de autenticación basado en tokens utilizando **Laravel Sanctum** en el microservicio de Gestión de Usuarios, permitiendo que otros microservicios validen solicitudes según el perfil del usuario:  
-`administrador` | `editor` | `usuario`
+## 🎯 Objetivo del Proyecto
+Implementar un microservicio de **autenticación y gestión de usuarios** utilizando **Laravel Sanctum**, permitiendo emitir y validar **API Tokens** para proteger otros microservicios dentro del sistema.
+
+Cada usuario posee un **perfil** que determina su nivel de acceso:
+
+- `administrador`
+- `editor`
+- `usuario`
+
+Este microservicio será consumido por otros módulos del sistema para validar permisos y autenticar solicitudes.
 
 ---
 
-### Tecnologías utilizadas
-- Laravel 11.x
-- Laravel Sanctum (API tokens)
-- MySQL + phpMyAdmin
-- Postman / Thunder Client (pruebas)
-- Git & GitHub
+## 🛠️ Tecnologías Utilizadas
+- **Laravel 11.x**
+- **Laravel Sanctum** (API Tokens)
+- **MySQL** + phpMyAdmin
+- **Postman / Thunder Client**
+- **Git & GitHub**
 
 ---
 
-### Estructura final de la tabla `users`
+## 🗄️ Estructura Final de la Tabla `users`
 
-```sql
-id              bigint unsigned AUTO_INCREMENT PRIMARY KEY
-nombre          varchar(255)
-email           varchar(255) UNIQUE
-password        varchar(255)
-perfil          enum('administrador','editor','usuario') DEFAULT 'usuario'
-remember_token  varchar(100) NULL
-created_at      timestamp NULL
-updated_at      timestamp NULL
+| Campo             | Tipo                                                    | Descripción                   |
+|-------------------|---------------------------------------------------------|-------------------------------|
+| `id`              | BIGINT UNSIGNED (PK)                                    | Identificador del usuario     |
+| `name`            | VARCHAR(255)                                            | Nombre del usuario            |
+| `email`           | VARCHAR(255) UNIQUE                                     | Correo electrónico            |
+| `email_verified_at` | TIMESTAMP NULL                                        | Fecha de verificación         |
+| `password`        | VARCHAR(255)                                            | Contraseña en hash            |
+| `perfil`          | ENUM('administrador','editor','usuario') DEFAULT 'usuario' | Rol del usuario          |
+| `remember_token`  | VARCHAR(100) NULL                                       | Token de sesión               |
+| `created_at`      | TIMESTAMP NULL                                          | Fecha de creación             |
+| `updated_at`      | TIMESTAMP NULL                                          | Fecha de actualización        |
+
+---
+
+## 📦 Instalación del Proyecto
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/TU-USUARIO/microservicio-autenticacion-usuarios.git
+cd microservicio-autenticacion-usuarios
+

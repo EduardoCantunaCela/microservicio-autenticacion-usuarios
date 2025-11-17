@@ -55,3 +55,13 @@ Este microservicio será consumido por otros módulos del sistema para validar p
 git clone https://github.com/TU-USUARIO/microservicio-autenticacion-usuarios.git
 cd microservicio-autenticacion-usuarios
 
+### 2. Instalar dependencias
+composer install
+
+### 3. Configurar archivo .env
+cp .env.example .env
+
+### Configurar conexión a MySQL:
+DB_DATABASE=usuarios
+DB_USERNAME=root
+DB_PASSWORD=

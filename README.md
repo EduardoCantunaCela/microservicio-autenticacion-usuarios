@@ -6,7 +6,8 @@
 - Jonathan Hernández  
 - Marco Chacón  
 - Carlos Fernández  
-- Carlos Cantuña  
+- Carlos Cantuña
+- Sergio Condo  
 
 ---
 

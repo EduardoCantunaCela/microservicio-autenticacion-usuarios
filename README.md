@@ -74,21 +74,6 @@ php artisan migrate
 
 ---
 
-## 📦 Instalación del Proyecto
-Registro
-POST /api/register
-
-Inicio de sesión
-POST /api/login
-
-Cerrar sesión
-POST /api/logout
-
-Obtener usuario autenticado
-GET /api/user
-
-
-(Dependen del controlador implementado por el equipo.)
 
 ## Descripción General
 

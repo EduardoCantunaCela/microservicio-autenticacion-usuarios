@@ -52,7 +52,6 @@ Este microservicio será consumido por otros módulos del sistema para validar p
 ## 📦 Instalación del Proyecto
 
 ### 1. Clonar el repositorio
-```bash
 git clone https://github.com/TU-USUARIO/microservicio-autenticacion-usuarios.git
 cd microservicio-autenticacion-usuarios
 

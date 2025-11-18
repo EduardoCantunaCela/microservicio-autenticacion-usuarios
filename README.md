@@ -16,9 +16,9 @@ Implementar un microservicio de **autenticación y gestión de usuarios** utiliz
 
 Cada usuario posee un **perfil** que determina su nivel de acceso:
 
-- `administrador`
-- `editor`
-- `usuario`
+- administrador
+- editor
+- usuario
 
 Este microservicio será consumido por otros módulos del sistema para validar permisos y autenticar solicitudes.
 
@@ -92,18 +92,18 @@ GET /api/user
 
 (Dependen del controlador implementado por el equipo.)
 
-📘 Descripción General
+## Descripción General
 
 Este microservicio permite:
 
-Registrar usuarios
+- Registrar usuarios
 
-Generar tokens de autenticación
+- Generar tokens de autenticación
 
-Validar tokens desde otros microservicios
+- Validar tokens desde otros microservicios
 
-Asignar y verificar roles (perfil)
+- Asignar y verificar roles (perfil)
 
-Administrar sesiones mediante Laravel Sanctum
+- Administrar sesiones mediante Laravel Sanctum
 
 Actúa como autoridad central de autenticación dentro de una arquitectura basada en microservicios.
